@@ -13,10 +13,10 @@ namespace ContosoSite.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ContosoUniversity2Entities : DbContext
+    public partial class ContosoUniversityDataEntities : DbContext
     {
-        public ContosoUniversity2Entities()
-            : base("name=ContosoUniversity2Entities")
+        public ContosoUniversityDataEntities()
+            : base("name=ContosoUniversityDataEntities")
         {
         }
     
@@ -26,9 +26,7 @@ namespace ContosoSite.Models
         }
     
         public virtual DbSet<Course> Courses { get; set; }
-        public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Enrollment> Enrollments { get; set; }
-        public virtual DbSet<OfficeAssignment> OfficeAssignments { get; set; }
-        public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
     }
 }
